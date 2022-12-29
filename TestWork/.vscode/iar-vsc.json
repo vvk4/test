@@ -1,0 +1,6 @@
+{
+    "argumentVariablesFile": "${workspaceFolder}\\FreeRTOSv202212.00\\FreeRTOS\\Demo\\RX700_RX72N_EnvisionKit_IAR_e2studio_EWRX\\RTOSDemo.custom_argvars",
+    "ewp": "${workspaceFolder}\\testWork.ewp",
+    "configuration": "Flash Debug",
+    "toolchain": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.1"
+}
