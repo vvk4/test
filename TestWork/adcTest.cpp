@@ -101,7 +101,7 @@ void AdcTest::AdcInit(void)
   NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0x00;
   NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
   NVIC_Init(&NVIC_InitStructure);
-  NVIC_SetPriority(ADC_IRQn, 7); // Priority
+  NVIC_SetPriority(ADC_IRQn, 9); // Priority
 
   RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_DMA2, ENABLE);
   RCC_AHB1PeriphClockCmd(ADCx_CHANNEL_GPIO_CLK, ENABLE);
