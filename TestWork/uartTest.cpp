@@ -186,10 +186,10 @@ void UartTest::ProcessCommand(void)
   }
   else
   {
-    /*        char ucmd[50]="\r\nunknown command: \"";
-            strcat (ucmd, rx_buffer);
-            strcat (ucmd, "\"\r\n");
-            UartTx((uint8_t *)ucmd, strlen(ucmd) - 1);*/
+    char ucmd[50]="\r\nunknown command: \"";
+    strcat (ucmd, rx_buffer);
+    strcat (ucmd, "\"\r\n");
+    UartTx((uint8_t *)ucmd, strlen(ucmd) - 1);
   }
 }
 
@@ -203,7 +203,7 @@ void USART3_IRQHandler(void)
 {
   if (USART_GetFlagStatus(USARTx, USART_FLAG_TC) == SET)
   {
-    USART_ClearFlag(USARTx, USART_FLAG_TC); // Передача закончена
+    USART_ClearFlag(USARTx, USART_FLAG_TC); // ГЏГҐГ°ГҐГ¤Г Г·Г  Г§Г ГЄГ®Г­Г·ГҐГ­Г 
     uart_ready = 1;
   }
 
@@ -213,7 +213,7 @@ void USART3_IRQHandler(void)
     uint16_t val = USART_ReceiveData(USARTx);
     xSemaphoreGiveFromISR(xSemaphore, pdFALSE);
 
-    DMA_Cmd(USARTx_RX_DMA_STREAM, DISABLE); // Перезапуск DMA приемника
+    DMA_Cmd(USARTx_RX_DMA_STREAM, DISABLE); // ГЏГҐГ°ГҐГ§Г ГЇГіГ±ГЄ DMA ГЇГ°ГЁГҐГ¬Г­ГЁГЄГ 
     while (DMA_GetCmdStatus(USARTx_RX_DMA_STREAM))
       ;
     uint16_t len = BUFFERSIZE - DMA_GetCurrDataCounter(USARTx_RX_DMA_STREAM);
