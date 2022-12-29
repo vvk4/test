@@ -63,6 +63,7 @@ unknown command: "fghdfgjdjfgdjfgj"
 - DMA1_Stream3_IRQn (DMA при передаче по UART): 8
 - USART3_IRQn (UART): 8
 - ADC_IRQn (ADC): 9
+
 configMAX_SYSCALL_INTERRUPT_PRIORITY = 5 (оставлен по умолчанию)
 
 
