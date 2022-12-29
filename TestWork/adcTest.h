@@ -40,6 +40,6 @@ struct ResultVal
   float rms_value;
 };
 
-extern ResultVal res_val;
+extern volatile ResultVal res_val;
 
 #endif
