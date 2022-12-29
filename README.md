@@ -55,7 +55,7 @@ unknown command: "fghdfgjdjfgdjfgj"
 В задаче свотодиода проверяется флаг ```ADC_WORK_ON``` и при включенном АЦП светодиод горит постоянно, а при выключенном мигает с частотой 5Гц.
 
 ## Приоритеты задач.
-- ProcessUARTRxTask: 4 (наивысший, т.к. должна реагировать на внешнее асинхронное событие)
+- ProcessUARTRxTask: 4
 - ProcessADCTask: 3
 - ProcessLedTask: 2
 
