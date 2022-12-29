@@ -7,7 +7,7 @@
 
 uint8_t AdcTest::AdcState = ADC_OFF;
 uint16_t avrgArray[AVRG_SIZE];
-ResultVal res_val;
+volatile ResultVal res_val;
 QueueHandle_t xQueueADC = NULL;
 AdcTest adcTest;
 
