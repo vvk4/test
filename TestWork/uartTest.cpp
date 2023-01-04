@@ -211,7 +211,7 @@ void USART3_IRQHandler(void)
   {
 
     uint16_t val = USART_ReceiveData(USARTx);
-    xSemaphoreGiveFromISR(xSemaphore, pdFALSE);
+    xSemaphoreGiveFromISR(xSemaphore, NULL);
 
     DMA_Cmd(USARTx_RX_DMA_STREAM, DISABLE); // Ïåðåçàïóñê DMA ïðèåìíèêà
     while (DMA_GetCmdStatus(USARTx_RX_DMA_STREAM))
