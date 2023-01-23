@@ -9,7 +9,7 @@
 
 char tx_buffer[BUFFERSIZE];
 char rx_buffer[BUFFERSIZE];
-uint8_t uart_ready;
+volatile uint8_t uart_ready;
 SemaphoreHandle_t xSemaphore = NULL;
 EventGroupHandle_t xEventGroup;
 UartTest uartTest;
